@@ -1,0 +1,19 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "rss school task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrinaBukley23/Virtual-Keyboard.git"
+  },
+  "author": "irinabukley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrinaBukley23/Virtual-Keyboard/issues"
+  },
+  "homepage": "https://github.com/IrinaBukley23/Virtual-Keyboard#readme"
+}
