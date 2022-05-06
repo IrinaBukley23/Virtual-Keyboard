@@ -33,6 +33,14 @@
     color: #ffffff;
     cursor: pointer;
     font-size: 20px;
+    transition: 0.5s all;
+}
+.button:hover {
+    background-color: #019570;
+}
+.button.active {
+    background-color: #42a547;
+    border-radius: 50px
 }
 
 .button-Backspacekey, .button-CapsLockkey, .button-Enterkey, .button-Shiftkey {

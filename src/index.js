@@ -12,6 +12,16 @@ keyboardTextarea.rows = 12;
 keyboardTextarea.cols = 130;
 keyboardContainer.append(keyboardTextarea);
 
+let textSystem = document.createElement('p');
+textSystem.style.textAlign = "center";
+textSystem.innerHTML = 'Клавиатура создана в операционной системе Windows';
+document.body.append(textSystem);
+
+let textCheck = document.createElement('p');
+textCheck.style.textAlign = "center";
+textCheck.innerHTML = 'Для переключения языка комбинация: левыe ctrl + alt';
+document.body.append(textCheck);
+
 let ruKeys = [
     ['ё', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'], 
     ['Tab', 'й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'ъ', '\\', 'Del'], 
@@ -33,16 +43,32 @@ keyBlock.className = 'key-block';
 keyboardContainer.append(keyBlock);
 
 let button; 
+let flag = false
 
-ruKeys.forEach(item => {
-    let row = document.createElement('div');
-    row.className = 'key-row';
-    keyBlock.append(row);
-    
-    item.forEach(element => {
-        button = document.createElement('div');
-        button.className = `button button-${element}key`;
-        button.innerHTML = element;
-        row.append(button);
+if(flag) {
+    enKeys.forEach(item => {
+        let row = document.createElement('div');
+        row.className = 'key-row';
+        keyBlock.append(row);
+        
+        item.forEach(element => {
+            button = document.createElement('div');
+            button.className = `button button-${element}key`;
+            button.innerHTML = element;
+            row.append(button);
+        })
     })
-})
+} else {
+    ruKeys.forEach(item => {
+        let row = document.createElement('div');
+        row.className = 'key-row';
+        keyBlock.append(row);
+        
+        item.forEach(element => {
+            button = document.createElement('div');
+            button.className = `button button-${element}key`;
+            button.innerHTML = element;
+            row.append(button);
+        })
+    })
+}
